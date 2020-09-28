@@ -20,7 +20,7 @@ const menuList = iconData.map (menu =>  <Icon key={menu.id} icon={menu.icon} tit
                     {menuList}
                 </div>
             </div>
-            ggggggggggggggggggggz
+            Work in progress
             <h3>fefefee</h3>
         </div>
     )
