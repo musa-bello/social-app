@@ -43,7 +43,7 @@ class SignUp extends Component {
                             <p>Already have an account?</p>
                         </div>
                         <div className="mx-8 my-4">
-                            <Link to="/signin">
+                            <Link to="/">
                                 <button className="bg-transparent hover:bg-blue-500 border border-blue-500 hover:border-transparent hover:text-white py-2 px-4 rounded-full">Sign In
                                 </button>
                             </Link>

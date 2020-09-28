@@ -4,6 +4,7 @@ import LoginInput from '../reusable/LoginInput'
 import { logIn } from '../actions/authAction'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 class Login extends Component {
     state = {
@@ -28,7 +29,9 @@ class Login extends Component {
 
     render() {
         const { user: {email, password} } = this.state
+        const { uid } = this.props
         console.log(email, password);
+        if (uid) return <Redirect to="/"/>
         return (
             <div className="flex flex-wrap h-screen">
                 <div className="w-full sm:w-2/4 bg-contain bg-bottom bg-no-repeat bg-blue-500" style={{backgroundImage:`url(${unlock})`}}> </div>
@@ -82,10 +85,16 @@ class Login extends Component {
     }
 }
 
-    const mapDispatchToProps = dispatch => {
-        return{
-            logIn: (credentials) => dispatch(logIn(credentials))
-        }
+const mapStateToProps = state => {
+    return {
+        uid: state.firebase.auth.uid 
     }
+}
 
-export default connect(null, mapDispatchToProps) (Login)
+const mapDispatchToProps = dispatch => {
+    return{
+        logIn: (credentials) => dispatch(logIn(credentials))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (Login)

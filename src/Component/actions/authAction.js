@@ -40,22 +40,3 @@ export const signUp = (credentials) => {
 }
 
 
-/* export const createUser = (creds) => {
-    return (dispatch, getState, { getFirebase }) => {
-        const firestore = getFirebase().firestore()
-        firestore
-            .collection('users')
-            .add({
-                firstName: creds.firstName,
-                lastName: creds.lastName,
-                email: creds.email,
-                createdOn: new Date()
-            })
-            .then(() => {
-                dispatch({ type: "CREATE_USER" })
-            })
-            .catch(error => {
-                dispatch({ type: "CREATE_USER_ERROR" }, error)
-            })
-    }
-} */
