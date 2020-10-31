@@ -42,7 +42,7 @@ class Login extends Component {
                         </div>
                         <div className="mx-8 my-4">
                             <Link to="/signup">
-                                <button className="bg-transparent hover:bg-blue-500 border border-blue-500 hover:border-transparent hover:text-white py-2 px-4 rounded-full">Get Started
+                                <button className="bg-transparent hover:bg-blue-500 border border-blue-500 hover:border-transparent hover:text-white py-2 px-4 rounded-full focus:outline-none">Get Started
                                 </button>
                             </Link>
                         </div>
