@@ -3,6 +3,10 @@ Social media app (Work in progress) created using React, React-Redux, Firebase a
 
 Hosted URL: [Let's go there](https://social-app.musa-bello.vercel.app/)
 
+Just in case you feel signing up will be tedious, use the login details below
+email: mbibrahim.4@gmail.com
+password: password
+
 <p align="center">
   <img src="./screencapture.png" alt='Screenshot'>
 </p>
